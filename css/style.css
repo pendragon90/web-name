@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url('../image/bg.webp') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* header navbar logo */
+
+#logo {
+    display: none;
+}
+
+#close {
+    display: none;
+}
+
+#sidenav.active {
+    transform: translateX(0);
+}
+
+.bg {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(250, 250, 250, 0.5);
+    max-width: 100%;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+header {
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999999;
+}
+
+header h2 {
+    color: #364f6b;
+    font-size: 50px;
+    font-family: serif;
+}
+
+#sidenav {
+    display: flex;
+    place-content: center;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    width: max-content;
+    margin: auto;
+}
+
+ul li a {
+    padding: 20px;
+    color: #364f6b;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+ul li a:hover {
+    color: #F0B27A;
+}
+
+/* Section card */
+
+section {
+    display: flex;
+    margin: 40px;
+    font-family: 'comic sans ms';
+    line-height: 35px;
+    justify-content: space-around;
+    color: #152d47;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+section .konten p {
+    font-size: 25px;
+}
+
+section h2 {
+    font-size: 40px;
+    font-family: serif;
+}
+
+section img {
+    width: 40%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.konten {
+    width: 50%;
+}
+
+.tombol a {
+    color: white;
+    font-family: sans-serif;
+}
+
+.tombol {
+    margin-top: 15px;
+    width: max-content;
+    padding: 10px;
+    background-color: #364f6b;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.tombol:hover {
+    background-color: #F0B27A;
+}
+
+/* Coffee shop list */
+
+.coffeelist {
+    font-family: 'comic sans ms';
+    font-size: 45px;
+    color: #063364;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 2px solid #364f6b;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* card  */
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.kartu-judul {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 20px;
+    color: #364f6b;
+}
+
+.kartu:hover {
+    transform: scale(1.1);
+}
+
+.kartu-judul h2 {
+    color: #152d47;
+    width: max-content;
+    font-family: serif;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.kartu {
+    transition: all 0.5s;
+    margin-top: 10px;
+    border: 1px solid #364f6b;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.kartu img {
+    width: 100%;
+}
+
+.kartu p {
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.kartu .tombol a {
+    font-family: serif;
+}
+
+.tombol-lagi {
+    display: flex;
+    justify-content: center;
+}
+
+.card .kartu-judul .kartu .tombol {
+    margin: 10px;
+}
+
+
+/* footer */
+
+footer {
+    display: flex;
+    background-color: #364f6b;
+    justify-content: space-around;
+}
+
+footer .akhir {
+    font-family: sans-serif;
+    width: 20%;
+    padding: 10px;
+    margin: 20px;
+    line-height: 30px;
+}
+
+.akhir a {
+    color: black;
+}
+
+.akhir a:hover {
+    color: #063364;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+@media screen and (max-width: 576px) {
+
+    /* header */
+    .bg {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        position: fixed;
+    }
+
+    .sect1 {
+        margin-top: 23%;
+    }
+
+    header #sidenav {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: white;
+        height: 100vh;
+        width: 70%;
+        transform: translateX(200%);
+        transition: all 0.3s ease-in-out;
+        outline: 1px solid #364f6b;
+    }
+
+    ul {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        margin-top: 40px;
+    }
+
+    header ul li a {
+        font-size: large;
+    }
+
+    header h2 {
+        font-size: 38px;
+    }
+
+    #logo {
+        display: flex;
+        align-items: center;
+        color: #364f6b;
+    }
+
+    #close {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        display: flex;
+        padding: 10px;
+        height: max-content;
+        border-bottom: 1px solid #063364;
+        color: #063364;
+        background-color: #002750a1;
+    }
+
+    #logo:hover {
+        color: #F0B27A;
+    }
+
+    #close:hover {
+        color: #F0B27A;
+    }
+
+    /* section */
+    section {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .konten {
+        width: 100%;
+    }
+
+    .sect {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    section img {
+        width: 100%;
+    }
+
+    /* section h2, section p {
+        max-width: 100%;
+    } */
+
+    /* card */
+
+    .kartu-judul {
+        display: flex;
+        width: 40%;
+    }
+
+    .kartu-judul h2 {
+        font-size: medium;
+        margin: auto;
+    }
+
+    .kartu-judul .tombol {
+        margin: auto;
+    }
+
+
+    /* akhir */
+
+    footer {
+        flex-wrap: wrap;
+    }
+
+    footer .akhir {
+        width: 40%;
+    }
+
+    .akhir h2 {
+        width: max-content;
+    }
+}
